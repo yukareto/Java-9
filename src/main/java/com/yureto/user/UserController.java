@@ -1,13 +1,8 @@
 package com.yureto.user;
 
-import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.time.ZonedDateTime;
-import java.util.HashMap;
-import java.util.Map;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController {
@@ -22,23 +17,12 @@ public class UserController {
     public User getUser(@PathVariable("id") int id) {
         return userService.findUser(id);
     }
-
-    @ControllerAdvice
-    public class GlobalExceptionHandler {
-        @ExceptionHandler(UserNotFoundException.class)
-        @ResponseStatus(HttpStatus.NOT_FOUND)
-        public ResponseEntity<Map<String, String>> handleUserNotFoundException(
-                UserNotFoundException e, HttpServletRequest request) {
-            Map<String, String> body = new HashMap<>();
-            body.put("timestamp", ZonedDateTime.now().toString());
-            body.put("status", String.valueOf(HttpStatus.NOT_FOUND.value()));
-            body.put("error", HttpStatus.NOT_FOUND.getReasonPhrase());
-            body.put("message", e.getMessage());
-            body.put("path", request.getRequestURI());
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(body);
-        }
-    }
 }
+
+
+
+
+
 
 
 
