@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @ControllerAdvice
-public class GlobalExceptionHandler {
+public class UserExceptionHandler {
 
     @ExceptionHandler(value = UserNotFoundException.class)
     public ResponseEntity<Map<String, String>> handleUserNotFoundException(

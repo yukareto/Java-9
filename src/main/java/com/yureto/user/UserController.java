@@ -12,17 +12,8 @@ public class UserController {
         this.userService = userService;
     }
 
-
     @GetMapping("/users/{id}")
     public User getUser(@PathVariable("id") int id) {
         return userService.findUser(id);
     }
 }
-
-
-
-
-
-
-
-
