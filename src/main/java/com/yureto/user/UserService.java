@@ -19,4 +19,15 @@ public class UserService {
             throw new UserNotFoundException("user_id : " + id +  "not found");
         }
     }
+
+    public User insert(String name, String email) {
+        Optional<User> userOptional = this.userMapper.findByEmail(email);
+        if (userOptional.isPresent()) {
+            throw new UserAlreadyExistsException("email : " + email + " already exists");
+        }
+
+        User user = User.createUser(name, email);
+        this.userMapper.insert(user);
+        return user;
+    }
 }
