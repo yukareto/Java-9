@@ -1,8 +1,16 @@
-package com.yureto.user;
+package com.yureto.user.controller;
 
+import com.yureto.user.controller.request.UserRequest;
+import com.yureto.user.controller.response.UserResponse;
+import com.yureto.user.entity.User;
+import com.yureto.user.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;

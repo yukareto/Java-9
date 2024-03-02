@@ -1,4 +1,4 @@
-package com.yureto.user;
+package com.yureto.user.entity;
 
 public class User {
     public Integer id;

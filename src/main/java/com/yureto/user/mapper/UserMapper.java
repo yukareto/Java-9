@@ -1,5 +1,6 @@
-package com.yureto.user;
+package com.yureto.user.mapper;
 
+import com.yureto.user.entity.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;

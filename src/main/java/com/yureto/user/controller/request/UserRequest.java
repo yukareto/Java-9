@@ -1,4 +1,4 @@
-package com.yureto.user;
+package com.yureto.user.controller.request;
 
 import jakarta.validation.constraints.NotNull;
 
