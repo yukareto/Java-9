@@ -1,4 +1,4 @@
-package com.yureto.user;
+package com.yureto.user.controller.response;
 
 public class UserResponse {
 

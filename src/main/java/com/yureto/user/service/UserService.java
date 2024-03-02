@@ -1,5 +1,9 @@
-package com.yureto.user;
+package com.yureto.user.service;
 
+import com.yureto.user.entity.User;
+import com.yureto.user.exception.UserAlreadyExistsException;
+import com.yureto.user.exception.UserNotFoundException;
+import com.yureto.user.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

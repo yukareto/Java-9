@@ -1,4 +1,4 @@
-package com.yureto.user;
+package com.yureto.user.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

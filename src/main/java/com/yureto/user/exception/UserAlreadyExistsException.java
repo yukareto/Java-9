@@ -1,4 +1,4 @@
-package com.yureto.user;
+package com.yureto.user.exception;
 
 public class UserAlreadyExistsException  extends RuntimeException{
 
